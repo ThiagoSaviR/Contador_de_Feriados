@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    box-sizing: border-box;
+    border:none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#000000, #1e3575);
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
+.container h1{
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgb(53, 34, 109);
+    background:linear-gradient(#fffbfb, #7285b9);
+    font-size: 2rem;
+    padding: 5px 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 img{
+    width: 50px;
+    position: relative;
+    z-index: 0;
+    margin-right: 15px;
+}
+.date{
+    color: rgb(53, 34, 109);
+    background:linear-gradient(#fffbfb, #7285b9);
+    width: 430px;
+    height: 250px;
+    padding: 60px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+.date h2{
+    margin-bottom: 35px;
+    font-size: 1.5rem;
+}
+.date p{
+    font-size: 2rem;
+}
+.buttons{
+    width: 430px;
+}
+.btn{
+    padding: 0.7em 2.3em;
+    margin-top: 10px;
+    cursor: pointer;
+    background:linear-gradient(rgb(255, 251, 251), rgb(114, 133, 185));
+    text-decoration: none;
+    font-weight:bold;
+    font-size:1rem; 
+    color: rgb(53, 34, 109);
+    border-radius:8px; 
+    transition: 0.5s;
+}
+.btn:hover, .btn:focus, .btn:active {
+  box-shadow: 0 13px 8px -8px rgba(0, 0, 0, 0.5);
+}
+.edit button{
+    width: 100%;
+    background:linear-gradient(rgba(109, 231, 115),rgba(46, 199, 33));
+    color: rgb(15, 63, 11)
+}
+.add-today button{
+    padding: 0.7rem 2.77rem;
+}
+.container-modal{
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-modal.show{
+    display: flex;
+}
+.modal-add{
+    width: 500px;
+    height: 400px;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative; 
+}
+.modal-add h2{
+    margin-bottom: 20px; 
+}
+.input input,
+.calendar input{
+    background:linear-gradient(90deg, rgba(74, 67, 112, 0.7) 0%, rgba(93, 92, 104, 0.7) 100%);
+    width: 310px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 3px 5px 3px 5px;
+    outline: none;
+}
+.input input:focus{
+    box-shadow: 0 13px 8px -8px rgba(0, 0, 0, 0.5);
+}
+.input input::placeholder,
+.calendar input::placeholder{
+    color: #fff;
+}
+.file input{
+    margin-bottom: 10px;
+}
+.close{
+    position: absolute;
+    font-size: 1.2rem;
+    top: -13px;
+    right: -13px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(74, 67, 112) 0%, rgba(93, 92, 104) 100%);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+}
+.dates-edit li{
+    width: 400px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.dates-edit button{
+    height: 35px;
+    padding: 0.7em 1.3em;
+    font-size:0.8rem; 
+    margin: 0 5px;
+}
+.modal-edit{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+}
+.modal-edit i{
+    font-size: 1.3rem;
+}
+.modal-edit h2{
+    margin-bottom: 20px; 
+}
+li > p{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.btn-delete{
+    background: linear-gradient(rgba(243, 178, 178), rgba(231, 68, 68));
+    color: rgba(58, 10, 10);
+    display: flex;
+    align-items: center;
+}
+.fas, .fa-trash{
+    pointer-events: none;
+}

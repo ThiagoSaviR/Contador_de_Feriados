@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador de Dias</title>
+</head>
+<body>
+    <section class="container" id="container">
+        <h1>
+            <img src="assets/img/2620532_calendar_employee_job_seeker_unemployee_icon.png" alt="title">
+            Gerenciador de Datas </h1>
+        <div class="date">
+            <h2 id="text">Hoje é:</h2>
+            <div id="today">
+                <p>0</p>
+            </div>
+        </div>
+    </section>
+    <section class="buttons">
+        <div class="edit">
+            <button class="btn" id="addDate">Adicione uma data comemorativa</button>
+        </div>
+        <div class="add-today">
+            <button class="btn" id="editDate">Ver datas cadastradas</button>
+            <button class="btn" id="btnToday">Data de hoje</button>
+        </div>
+    </section>
+    <!-- MODAL ADICIONA -->
+    <section class="container-modal" id="modalAdd">
+        <div class="modal-add">
+            <button class="close" id="closeAdd">X</button>
+            <h2>Adicionar Data Comemorativa</h2>
+            <div class="input">
+                <input type="text" placeholder="Escreva uma descrição para sua data" name="name" id="name">
+            </div>
+            <div class="calendar">
+                <input class="form-control" type="datetime-local" id="myDate" placeholder="Selecione sua data">
+            </div>
+            <div class="file">
+                <input type="file" name="image" accept="image/*" class="img" id="upload">
+            </div>
+            <button class="btn" id="send">Enviar</button>
+        </div>
+    </section>
+    <!-- MODAL Datas Cadastradas -->
+    <section class="container-modal" id="modalEdit">
+        <div class="modal-edit" id="modalListEdit">
+            <button class="close" id="closeEdit">X</button>
+            <h2>Datas Cadastradas</h2>
+            <ul class="dates-edit" id="dates"></ul>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
